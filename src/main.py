@@ -1,12 +1,10 @@
-from students import insert_students, recover_student, populate_table
+from students import Student, StudentTable, populate_table
 
-# Populando a tabela com 10 registros
-populate_table()
-
-# Exemplo de uso: Recuperar student com ID 5
-student_id = 6
-student = recover_student(student_id)
-if student:
-    print(f"Aluno encontrado: ID={student['id']}, Nome={student['name']}, Idade={student['age']}")
-else:
-    print(f"Aluno com ID {student_id} não encontrado.")
+if __name__ == "__main__":
+    table = StudentTable()
+    populate_table(table)
+    student = table.recover_student_by_id(11)
+    if student:
+        print(f"Aluno encontrado: {student.name}, Idade: {student.age}")
+    else:
+        print("Aluno não encontrado")

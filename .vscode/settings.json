@@ -1,0 +1,14 @@
+{
+    "python.analysis.extraPaths": [
+        "./tests/students_test/test_"
+    ],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./tests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
